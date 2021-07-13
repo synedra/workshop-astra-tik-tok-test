@@ -250,7 +250,7 @@ To know more about roles of each token you can have a look to [this video.](http
   ```
   netlify dev
   ```
-  * The application should automatically launch in the GitPod preview pane
+  * The application should automatically launch in the GitPod preview pane - you may need to click there (upper right) to remind it to finish loading.
 
 ### 9. Connect Netlify to your site
 Execute each of the commands below to link your code to your Netlify deployment.
@@ -287,7 +287,7 @@ Now that you've hooked everything up, time to deplpoy to production.
   netlify build
   ```
 
-  * Then run
+  * Then run the following command to pull in the environment variables you uploaded.
   ```
   netlify deploy --prod
   ```
@@ -307,7 +307,7 @@ Now that you've hooked everything up, time to deplpoy to production.
 Let's briefly dive into the connection between our serverless functions and our Astra DB.
 We are using the `@astrajs/collections` library to make the connection using the Document API provided by Stargate. To do so, we start by creating a 'client'. 
 
-(See: `functions/utils/astraClient.js`)
+In gitpod, enter `open functions/utils/astraClient.js`
 
 ``` javascript
 const { createClient } = require("@astrajs/collections");
@@ -356,7 +356,7 @@ We will call the collection "**tktkposts**".
 
 So now, any time we want to perform operations on our data, we will reference this method `getCollection`, and use the Document API from Stargate to do so.
 
-✅ Now that we have locally deployed our TikTok app, let's take a look at this in our database. Head to your [Astra DB dashboard](astra.datastax.com) and click the `Connect` button next to your database ('tiktok_workshop_db').
+✅ Now that we have deployed our TikTok app, let's take a look at this in our database. Head to your [Astra DB dashboard](astra.datastax.com) and click the `Connect` button next to your database ('tiktok_workshop_db').
 
 ![db_connect](./tutorial/images/db_connect.png?raw=true)
 
